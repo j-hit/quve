@@ -1,2 +1,2 @@
 # quve
-Cue the groove with quve - keep those sample sacred
+Cue the groove with quve - keep those samples sacred
