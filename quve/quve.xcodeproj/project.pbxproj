@@ -15,6 +15,10 @@
 		1A64ABD01BF8F6C00065106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64ABCE1BF8F6C00065106A /* LaunchScreen.storyboard */; };
 		1A64ABDB1BF8F6C00065106A /* quveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABDA1BF8F6C00065106A /* quveTests.swift */; };
 		1A64ABE61BF8F6C00065106A /* quveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABE51BF8F6C00065106A /* quveUITests.swift */; };
+		1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */; };
+		1A8B14F81BFCC73900483482 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F71BFCC73900483482 /* Track.swift */; };
+		1A8B14FA1BFCC81E00483482 /* CuePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F91BFCC81E00483482 /* CuePoint.swift */; };
+		1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		1A64ABE11BF8F6C00065106A /* quveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A64ABE51BF8F6C00065106A /* quveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quveUITests.swift; sourceTree = "<group>"; };
 		1A64ABE71BF8F6C00065106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerInformationProvider.swift; sourceTree = "<group>"; };
+		1A8B14F71BFCC73900483482 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		1A8B14F91BFCC81E00483482 /* CuePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePoint.swift; sourceTree = "<group>"; };
+		1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePointManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				1A64ABCC1BF8F6C00065106A /* Assets.xcassets */,
 				1A64ABCE1BF8F6C00065106A /* LaunchScreen.storyboard */,
 				1A64ABD11BF8F6C00065106A /* Info.plist */,
+				1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */,
+				1A8B14F71BFCC73900483482 /* Track.swift */,
+				1A8B14F91BFCC81E00483482 /* CuePoint.swift */,
+				1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */,
 			);
 			path = quve;
 			sourceTree = "<group>";
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */,
 				1A64ABC81BF8F6C00065106A /* DetailViewController.swift in Sources */,
+				1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */,
+				1A8B14FA1BFCC81E00483482 /* CuePoint.swift in Sources */,
 				1A64ABC61BF8F6C00065106A /* MasterViewController.swift in Sources */,
 				1A64ABC41BF8F6C00065106A /* AppDelegate.swift in Sources */,
+				1A8B14F81BFCC73900483482 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +504,7 @@
 				1A64ABEC1BF8F6C00065106A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A64ABED1BF8F6C00065106A /* Build configuration list for PBXNativeTarget "quveTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +513,7 @@
 				1A64ABEF1BF8F6C00065106A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A64ABF01BF8F6C00065106A /* Build configuration list for PBXNativeTarget "quveUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +522,7 @@
 				1A64ABF21BF8F6C00065106A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
