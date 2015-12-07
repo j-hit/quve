@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class CuePointManager {
     var tracks: [Track]
@@ -22,6 +23,7 @@ class CuePointManager {
             let title = nowPlayingItem.title{
                 let track = Track(title: title, artistName: nowPlayingItem.artist ?? "")
                 track.cuePoints.append(mediaPlayerInformationProvider.cuePointForNowPlayingTrack())
+                track.artwork = nowPlayingItem.artwork?.imageWithSize(CGSize(width: 50, height: 50))
                 tracks.append(track)
         }
     }

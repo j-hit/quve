@@ -67,10 +67,17 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("TrackTableViewCell", forIndexPath: indexPath) as! TrackTableViewCell
         let track = cuePointManager.tracks[indexPath.row]
-        cell.textLabel!.text = track.title
+        
+        cell.artistNameLabel.text = track.artistName
+        cell.trackNameLabel.text = track.title
+        cell.cueCountLabel.text = "\(track.cuePoints.count) cues"
+        cell.artworkImage.image = track.artwork ?? nil
+        
+        cell.artworkImage.layer.cornerRadius = 10
+        cell.artworkImage.clipsToBounds = true
+        
         return cell
     }
 

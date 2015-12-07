@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class Track{
     var title: String
     var artistName: String
     var cuePoints: [CuePoint]
+    var artwork: UIImage?
     
     init(title: String, artistName: String){
         self.title = title
