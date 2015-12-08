@@ -10,6 +10,7 @@ import Foundation
 
 class CuePoint{
     var playbackTime: NSTimeInterval
+    var description: String?
     
     init(playbackTime: NSTimeInterval){
         self.playbackTime = playbackTime

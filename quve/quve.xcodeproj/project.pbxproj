@@ -19,6 +19,7 @@
 		1A8B14F81BFCC73900483482 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F71BFCC73900483482 /* Track.swift */; };
 		1A8B14FA1BFCC81E00483482 /* CuePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F91BFCC81E00483482 /* CuePoint.swift */; };
 		1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */; };
+		1AC7F4951C175CAB00FDEC1F /* CuepointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */; };
 		1AFF22A41C162525005F9AFC /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF22A31C162525005F9AFC /* TrackTableViewCell.swift */; };
 		1AFF22A61C16343D005F9AFC /* AddCueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF22A51C16343D005F9AFC /* AddCueViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		1A8B14F71BFCC73900483482 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		1A8B14F91BFCC81E00483482 /* CuePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePoint.swift; sourceTree = "<group>"; };
 		1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePointManager.swift; sourceTree = "<group>"; };
+		1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuepointTableViewCell.swift; sourceTree = "<group>"; };
 		1AFF22A31C162525005F9AFC /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		1AFF22A51C16343D005F9AFC /* AddCueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1A64ABC31BF8F6C00065106A /* AppDelegate.swift */,
+				1AFF22A51C16343D005F9AFC /* AddCueViewController.swift */,
 				1A64ABC51BF8F6C00065106A /* MasterViewController.swift */,
 				1A64ABC71BF8F6C00065106A /* DetailViewController.swift */,
 				1A64ABC91BF8F6C00065106A /* Main.storyboard */,
@@ -123,7 +126,7 @@
 				1A8B14F91BFCC81E00483482 /* CuePoint.swift */,
 				1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */,
 				1AFF22A31C162525005F9AFC /* TrackTableViewCell.swift */,
-				1AFF22A51C16343D005F9AFC /* AddCueViewController.swift */,
+				1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */,
 			);
 			path = quve;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */,
 				1A64ABC81BF8F6C00065106A /* DetailViewController.swift in Sources */,
+				1AC7F4951C175CAB00FDEC1F /* CuepointTableViewCell.swift in Sources */,
 				1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */,
 				1AFF22A41C162525005F9AFC /* TrackTableViewCell.swift in Sources */,
 				1AFF22A61C16343D005F9AFC /* AddCueViewController.swift in Sources */,

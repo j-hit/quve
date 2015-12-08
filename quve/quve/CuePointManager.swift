@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 
-class CuePointManager {
+final class CuePointManager {
+    static let sharedInstance = CuePointManager()
+    
     var tracks: [Track]
     var mediaPlayerInformationProvider: MediaPlayerInformationProvider
     
-    init(){
+    private init(){
         tracks = [Track]()
         mediaPlayerInformationProvider = MediaPlayerInformationProvider()
     }
@@ -26,5 +28,29 @@ class CuePointManager {
                 track.artwork = nowPlayingItem.artwork?.imageWithSize(CGSize(width: 50, height: 50))
                 tracks.append(track)
         }
+    }
+    
+    func titleOfNowPlayingItem() -> String{
+        guard let nowPlayingItem = mediaPlayerInformationProvider.nowPlayingItem(),
+            let title = nowPlayingItem.title else{
+            return ""
+        }
+        return title
+    }
+    
+    func artistOfNowPlayingItem() -> String{
+        guard let nowPlayingItem = mediaPlayerInformationProvider.nowPlayingItem(),
+            let artist = nowPlayingItem.artist else{
+                return ""
+        }
+        return artist
+    }
+    
+    func artworkOfNowPlayingItem() -> UIImage?{
+        guard let nowPlayingItem = mediaPlayerInformationProvider.nowPlayingItem(),
+            let artwork = nowPlayingItem.artwork else{
+                return nil
+        }
+        return artwork.imageWithSize(CGSize(width: 50, height: 50))
     }
 }

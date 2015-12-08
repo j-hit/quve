@@ -8,17 +8,24 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+class DetailViewController: UITableViewController {
     var track: Track? {
         didSet {
-            self.configureView()
+            tableView.reloadData()
         }
     }
-
-    func configureView() {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let track = track{
+            navigationItem.title = track.title
+        }
+    }
+    
+    /*func configureView() {
         if let track = self.track {
             if let label = self.detailDescriptionLabel {
                 label.text = "\(track.artistName) - \(track.title)"
@@ -27,15 +34,38 @@ class DetailViewController: UIViewController {
                 }
             }
         }
+    }*/
+    
+    // MARK: - Table View
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configureView()
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return track?.cuePoints.count ?? 0
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CuepointTableViewCell", forIndexPath: indexPath) as! CuepointTableViewCell
+        
+        if let cuepoint = track?.cuePoints[indexPath.row]{
+            cell.cuepointDescriptionLabel.text = cuepoint.description ?? ""
+            cell.cuepointTimeRangeLabel.text = "\(cuepoint.estimatedStartTimeOfInterestPoint()) - \(cuepoint.addedAtPlaybackTime())"
+        }
+        
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            track?.cuePoints.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
 }
 
