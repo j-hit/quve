@@ -21,20 +21,9 @@ class DetailViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         if let track = track{
-            navigationItem.title = track.title
+            navigationItem.title = track.title + " - " + track.artistName
         }
     }
-    
-    /*func configureView() {
-        if let track = self.track {
-            if let label = self.detailDescriptionLabel {
-                label.text = "\(track.artistName) - \(track.title)"
-                for cuepoint in track.cuePoints{
-                    label.text?.appendContentsOf(" \n\(cuepoint.estimatedStartTimeOfInterestPoint()) - \(cuepoint.addedAtPlaybackTime())")
-                }
-            }
-        }
-    }*/
     
     // MARK: - Table View
     
@@ -66,6 +55,14 @@ class DetailViewController: UITableViewController {
             track?.cuePoints.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 74.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
 
