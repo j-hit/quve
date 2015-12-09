@@ -17,8 +17,11 @@ class CuePoint{
     }
     
     func estimatedStartTimeOfInterestPoint()->String{
+        var estimatedStartTime: NSTimeInterval = 0.0
         let secondsToSubtractFromPlaybackTime = 10.0
-        let estimatedStartTime: NSTimeInterval = playbackTime - secondsToSubtractFromPlaybackTime
+        if(playbackTime >= secondsToSubtractFromPlaybackTime){
+            estimatedStartTime = playbackTime - secondsToSubtractFromPlaybackTime
+        }
         return estimatedStartTime.timeAsHourMinuteSecondStringRepresentation()
     }
     
