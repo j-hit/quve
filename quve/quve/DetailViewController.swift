@@ -23,6 +23,7 @@ class DetailViewController: UITableViewController {
         if let track = track{
             navigationItem.title = track.title + " - " + track.artistName
         }
+        tableView.reloadData()
     }
     
     // MARK: - Table View
