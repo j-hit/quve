@@ -32,7 +32,6 @@ class MasterViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func insertNewObject(sender: AnyObject) {
@@ -71,7 +70,7 @@ class MasterViewController: UITableViewController {
         
         cell.artistNameLabel.text = track.artistName
         cell.trackNameLabel.text = track.title
-        cell.cueCountLabel.text = "\(track.cuePoints.count) cues"
+        cell.cueCountLabel.text = String.localizedStringWithFormat(NSLocalizedString("CueCountLabel", comment: "Info label: Track cue count"), track.cuePoints.count)
         cell.artworkImage.image = track.artwork ?? nil
         
         cell.artworkImage.layer.cornerRadius = 10
