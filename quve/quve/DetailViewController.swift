@@ -15,8 +15,17 @@ class DetailViewController: UITableViewController {
         }
     }
     
+    let lightRed = UIColor(red:0.84, green:0.26, blue:0.33, alpha:1.0)
+    let darkViolet = UIColor(red:0.45, green:0.33, blue:0.40, alpha:1.0)
+    let lightBlue = UIColor(red:0.46, green:0.66, blue:0.73, alpha:1.0)
+    let goldYellow = UIColor(red:0.96, green:0.80, blue:0.02, alpha:1.0)
+    let creme = UIColor(red:0.96, green:0.97, blue:0.85, alpha:1.0)
+    
+    var colors: [UIColor] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        colors = [creme, lightRed, lightBlue, darkViolet, goldYellow]
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,6 +51,7 @@ class DetailViewController: UITableViewController {
         if let cuepoint = track?.cuePoints[indexPath.row]{
             cell.cuepointDescriptionLabel.text = cuepoint.description ?? ""
             cell.cuepointTimeRangeLabel.text = "\(cuepoint.estimatedStartTimeOfInterestPoint()) - \(cuepoint.addedAtPlaybackTime())"
+            cell.cuepointImage.backgroundColor = colors[indexPath.row % colors.count]
         }
         
         return cell
