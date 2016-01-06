@@ -12,15 +12,12 @@ import MediaPlayer
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var cuePointManager = CuePointManager()
+    var cuePointManager = CuePointManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -30,11 +27,11 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func insertNewObject(sender: AnyObject) {
@@ -51,6 +48,7 @@ class MasterViewController: UITableViewController {
                 let track = cuePointManager.tracks[indexPath.row]
                 controller.track = track
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                //controller.navigationItem.backBarButtonItem?.title = " "
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
@@ -67,15 +65,21 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("TrackTableViewCell", forIndexPath: indexPath) as! TrackTableViewCell
         let track = cuePointManager.tracks[indexPath.row]
-        cell.textLabel!.text = track.title
+        
+        cell.artistNameLabel.text = track.artistName
+        cell.trackNameLabel.text = track.title
+        cell.cueCountLabel.text = String.localizedStringWithFormat(NSLocalizedString("CueCountLabel", comment: "Info label: Track cue count"), track.cuePoints.count)
+        cell.artworkImage.image = track.artwork ?? nil
+        
+        cell.artworkImage.layer.cornerRadius = 10
+        cell.artworkImage.clipsToBounds = true
+        
         return cell
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
 
@@ -86,6 +90,14 @@ class MasterViewController: UITableViewController {
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 82.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
 
