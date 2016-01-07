@@ -13,16 +13,12 @@ class MediaPlayerInformationProvider {
     lazy var systemMusicPlayer: MPMusicPlayerController = {
        return MPMusicPlayerController.systemMusicPlayer()
     }()
-    
-    func cuePointForNowPlayingTrack()->CuePoint{
-        return CuePoint(playbackTime: currentPlaybackTime())
-    }
-    
-    func nowPlayingItem()->MPMediaItem?{
+  
+    func nowPlayingItem() -> MPMediaItem?{
         return systemMusicPlayer.nowPlayingItem
     }
     
-    private func currentPlaybackTime()->NSTimeInterval{
+    func currentPlaybackTime() -> NSTimeInterval{
         return systemMusicPlayer.currentPlaybackTime
     }
 }
