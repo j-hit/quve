@@ -41,6 +41,7 @@ class DetailViewController: UITableViewController {
     if let track = track, title = track.title, artistName = track.artistName{
       navigationItem.title = title + " - " + artistName
     }
+    cuePointManager.reloadSavedData()
     tableView.reloadData()
   }
   

@@ -23,6 +23,7 @@
 		1A8521E01C3D152400343171 /* CuePoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */; };
 		1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */; };
 		1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */; };
+		1A93920C1C3E93FD002669A7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A93920B1C3E93FD002669A7 /* CloudKit.framework */; };
 		1AA419BB1C2870660022BE1C /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 1AA419B91C2870660022BE1C /* Localizable.stringsdict */; };
 		1AC7F4951C175CAB00FDEC1F /* CuepointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */; };
 		1AEDB9821C209F8600087C20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AEDB9841C209F8600087C20 /* Localizable.strings */; };
@@ -70,6 +71,8 @@
 		1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CuePoint+CoreDataProperties.swift"; path = "CoreData/CuePoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerInformationProvider.swift; sourceTree = "<group>"; };
 		1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePointManager.swift; sourceTree = "<group>"; };
+		1A93920A1C3E93ED002669A7 /* quve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quve.entitlements; sourceTree = "<group>"; };
+		1A93920B1C3E93FD002669A7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1AA419BA1C2870660022BE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuepointTableViewCell.swift; sourceTree = "<group>"; };
 		1AEDB9831C209F8600087C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A93920C1C3E93FD002669A7 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +109,7 @@
 		1A64ABB71BF8F6C00065106A = {
 			isa = PBXGroup;
 			children = (
+				1A93920B1C3E93FD002669A7 /* CloudKit.framework */,
 				1A64ABC21BF8F6C00065106A /* quve */,
 				1A64ABD91BF8F6C00065106A /* quveTests */,
 				1A64ABE41BF8F6C00065106A /* quveUITests */,
@@ -125,6 +130,7 @@
 		1A64ABC21BF8F6C00065106A /* quve */ = {
 			isa = PBXGroup;
 			children = (
+				1A93920A1C3E93ED002669A7 /* quve.entitlements */,
 				1A8521C91C3D05E800343171 /* quve-view */,
 				1A8521CA1C3D060000343171 /* quve-logic */,
 				1A8521C81C3D05D900343171 /* CoreData */,
@@ -259,6 +265,12 @@
 				TargetAttributes = {
 					1A64ABBF1BF8F6C00065106A = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = JJJY366A2R;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					1A64ABD51BF8F6C00065106A = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -495,10 +507,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = quve/quve.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pentapie.bampoej.quve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -506,10 +522,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = quve/quve.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pentapie.bampoej.quve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
