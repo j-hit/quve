@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1509" minimumToolsVersion="Xcode 7.0">
+    <entity name="CuePoint" representedClassName=".CuePoint" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playbackTime" attributeType="Double" minValueString="0" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="track" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="cuePoints" inverseEntity="Track" syncable="YES"/>
+    </entity>
+    <entity name="Track" representedClassName=".Track" syncable="YES">
+        <attribute name="artistName" attributeType="String" syncable="YES"/>
+        <attribute name="artwork" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="cuePoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CuePoint" inverseName="track" inverseEntity="CuePoint" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CuePoint" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="Track" positionX="-63" positionY="-18" width="128" height="105"/>
+    </elements>
+</model>

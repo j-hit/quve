@@ -15,10 +15,15 @@
 		1A64ABD01BF8F6C00065106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64ABCE1BF8F6C00065106A /* LaunchScreen.storyboard */; };
 		1A64ABDB1BF8F6C00065106A /* quveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABDA1BF8F6C00065106A /* quveTests.swift */; };
 		1A64ABE61BF8F6C00065106A /* quveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABE51BF8F6C00065106A /* quveUITests.swift */; };
+		1A8521CD1C3D0AAF00343171 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521CC1C3D0AAF00343171 /* CoreDataStack.swift */; };
+		1A8521D01C3D0C1D00343171 /* QuveDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521CE1C3D0C1D00343171 /* QuveDataModel.xcdatamodeld */; };
+		1A8521D61C3D128600343171 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521D21C3D128600343171 /* Track.swift */; };
+		1A8521D81C3D128600343171 /* CuePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521D41C3D128600343171 /* CuePoint.swift */; };
+		1A8521DF1C3D152400343171 /* Track+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521DD1C3D152400343171 /* Track+CoreDataProperties.swift */; };
+		1A8521E01C3D152400343171 /* CuePoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */; };
 		1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */; };
-		1A8B14F81BFCC73900483482 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F71BFCC73900483482 /* Track.swift */; };
-		1A8B14FA1BFCC81E00483482 /* CuePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F91BFCC81E00483482 /* CuePoint.swift */; };
 		1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */; };
+		1A93920C1C3E93FD002669A7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A93920B1C3E93FD002669A7 /* CloudKit.framework */; };
 		1AA419BB1C2870660022BE1C /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 1AA419B91C2870660022BE1C /* Localizable.stringsdict */; };
 		1AC7F4951C175CAB00FDEC1F /* CuepointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */; };
 		1AEDB9821C209F8600087C20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AEDB9841C209F8600087C20 /* Localizable.strings */; };
@@ -58,10 +63,16 @@
 		1A64ABE11BF8F6C00065106A /* quveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A64ABE51BF8F6C00065106A /* quveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quveUITests.swift; sourceTree = "<group>"; };
 		1A64ABE71BF8F6C00065106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8521CC1C3D0AAF00343171 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1A8521CF1C3D0C1D00343171 /* QuveDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuveDataModel.xcdatamodel; sourceTree = "<group>"; };
+		1A8521D21C3D128600343171 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = CoreData/Track.swift; sourceTree = "<group>"; };
+		1A8521D41C3D128600343171 /* CuePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CuePoint.swift; path = CoreData/CuePoint.swift; sourceTree = "<group>"; };
+		1A8521DD1C3D152400343171 /* Track+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataProperties.swift"; path = "CoreData/Track+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CuePoint+CoreDataProperties.swift"; path = "CoreData/CuePoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerInformationProvider.swift; sourceTree = "<group>"; };
-		1A8B14F71BFCC73900483482 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		1A8B14F91BFCC81E00483482 /* CuePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePoint.swift; sourceTree = "<group>"; };
 		1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePointManager.swift; sourceTree = "<group>"; };
+		1A93920A1C3E93ED002669A7 /* quve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quve.entitlements; sourceTree = "<group>"; };
+		1A93920B1C3E93FD002669A7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1AA419BA1C2870660022BE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuepointTableViewCell.swift; sourceTree = "<group>"; };
 		1AEDB9831C209F8600087C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -74,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A93920C1C3E93FD002669A7 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,7 @@
 		1A64ABB71BF8F6C00065106A = {
 			isa = PBXGroup;
 			children = (
+				1A93920B1C3E93FD002669A7 /* CloudKit.framework */,
 				1A64ABC21BF8F6C00065106A /* quve */,
 				1A64ABD91BF8F6C00065106A /* quveTests */,
 				1A64ABE41BF8F6C00065106A /* quveUITests */,
@@ -117,20 +130,15 @@
 		1A64ABC21BF8F6C00065106A /* quve */ = {
 			isa = PBXGroup;
 			children = (
+				1A93920A1C3E93ED002669A7 /* quve.entitlements */,
+				1A8521C91C3D05E800343171 /* quve-view */,
+				1A8521CA1C3D060000343171 /* quve-logic */,
+				1A8521C81C3D05D900343171 /* CoreData */,
 				1A64ABC31BF8F6C00065106A /* AppDelegate.swift */,
-				1AFF22A51C16343D005F9AFC /* AddCueViewController.swift */,
-				1A64ABC51BF8F6C00065106A /* MasterViewController.swift */,
-				1A64ABC71BF8F6C00065106A /* DetailViewController.swift */,
-				1AFF22A31C162525005F9AFC /* TrackTableViewCell.swift */,
-				1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */,
 				1A64ABC91BF8F6C00065106A /* Main.storyboard */,
 				1A64ABCC1BF8F6C00065106A /* Assets.xcassets */,
 				1A64ABCE1BF8F6C00065106A /* LaunchScreen.storyboard */,
 				1A64ABD11BF8F6C00065106A /* Info.plist */,
-				1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */,
-				1A8B14F71BFCC73900483482 /* Track.swift */,
-				1A8B14F91BFCC81E00483482 /* CuePoint.swift */,
-				1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */,
 				1AEDB9841C209F8600087C20 /* Localizable.strings */,
 				1AA419B91C2870660022BE1C /* Localizable.stringsdict */,
 			);
@@ -153,6 +161,40 @@
 				1A64ABE71BF8F6C00065106A /* Info.plist */,
 			);
 			path = quveUITests;
+			sourceTree = "<group>";
+		};
+		1A8521C81C3D05D900343171 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1A8521DD1C3D152400343171 /* Track+CoreDataProperties.swift */,
+				1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */,
+				1A8521D21C3D128600343171 /* Track.swift */,
+				1A8521D41C3D128600343171 /* CuePoint.swift */,
+				1A8521CC1C3D0AAF00343171 /* CoreDataStack.swift */,
+				1A8521CE1C3D0C1D00343171 /* QuveDataModel.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		1A8521C91C3D05E800343171 /* quve-view */ = {
+			isa = PBXGroup;
+			children = (
+				1AFF22A51C16343D005F9AFC /* AddCueViewController.swift */,
+				1A64ABC51BF8F6C00065106A /* MasterViewController.swift */,
+				1A64ABC71BF8F6C00065106A /* DetailViewController.swift */,
+				1AFF22A31C162525005F9AFC /* TrackTableViewCell.swift */,
+				1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */,
+			);
+			name = "quve-view";
+			sourceTree = "<group>";
+		};
+		1A8521CA1C3D060000343171 /* quve-logic */ = {
+			isa = PBXGroup;
+			children = (
+				1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */,
+				1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */,
+			);
+			name = "quve-logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +265,12 @@
 				TargetAttributes = {
 					1A64ABBF1BF8F6C00065106A = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = JJJY366A2R;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					1A64ABD51BF8F6C00065106A = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -288,16 +336,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8521D81C3D128600343171 /* CuePoint.swift in Sources */,
 				1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */,
 				1A64ABC81BF8F6C00065106A /* DetailViewController.swift in Sources */,
+				1A8521D01C3D0C1D00343171 /* QuveDataModel.xcdatamodeld in Sources */,
 				1AC7F4951C175CAB00FDEC1F /* CuepointTableViewCell.swift in Sources */,
 				1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */,
 				1AFF22A41C162525005F9AFC /* TrackTableViewCell.swift in Sources */,
 				1AFF22A61C16343D005F9AFC /* AddCueViewController.swift in Sources */,
-				1A8B14FA1BFCC81E00483482 /* CuePoint.swift in Sources */,
+				1A8521DF1C3D152400343171 /* Track+CoreDataProperties.swift in Sources */,
+				1A8521CD1C3D0AAF00343171 /* CoreDataStack.swift in Sources */,
+				1A8521E01C3D152400343171 /* CuePoint+CoreDataProperties.swift in Sources */,
 				1A64ABC61BF8F6C00065106A /* MasterViewController.swift in Sources */,
 				1A64ABC41BF8F6C00065106A /* AppDelegate.swift in Sources */,
-				1A8B14F81BFCC73900483482 /* Track.swift in Sources */,
+				1A8521D61C3D128600343171 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,10 +507,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = quve/quve.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pentapie.bampoej.quve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -466,10 +522,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = quve/quve.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pentapie.bampoej.quve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -561,6 +621,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A8521CE1C3D0C1D00343171 /* QuveDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A8521CF1C3D0C1D00343171 /* QuveDataModel.xcdatamodel */,
+			);
+			currentVersion = 1A8521CF1C3D0C1D00343171 /* QuveDataModel.xcdatamodel */;
+			path = QuveDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1A64ABB81BF8F6C00065106A /* Project object */;
 }
