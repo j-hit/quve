@@ -1,4 +1,4 @@
 language: objective-c
 script:
-  - xctool -project quve/quve.xcodeproj -scheme quve -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xctool test -project quve/quve.xcodeproj -scheme quveTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool -project quve/quve.xcodeproj -scheme quve -sdk iphonesimulator9.2 ONLY_ACTIVE_ARCH=NO
+  - xctool test -project quve/quve.xcodeproj -scheme quveTests -sdk iphonesimulator9.2 ONLY_ACTIVE_ARCH=NO
