@@ -1,5 +1,3 @@
 language: objective-c
-xcode_project: quve/quve.xcodeproj
-xcode_scheme: quve
 script:
-  - xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE= sdk iphonesimulator -destination 'platform=iOS Simulator,OS=latest,name=iPhone 6' clean build test -project quve/quve.xcodeproj -scheme quve
+  - xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE= -destination 'platform=iOS Simulator,OS=latest,name=iPhone 6' -project quve/quve.xcodeproj -scheme quve clean build test
