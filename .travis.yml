@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: quve/quve.xcodeproj
+xcode_scheme: quve
+osx_image: xcode7.3
