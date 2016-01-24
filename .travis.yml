@@ -4,4 +4,4 @@ xcode_project: quve/quve.xcodeproj
 xcode_scheme: quve
 xcode_sdk: iphonesimulator9.2
 script:
-  - xcodebuild clean build test -project quve/quve.xcodeproj -scheme quve
+  - xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE= clean build test -project quve/quve.xcodeproj -scheme quve
