@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3919091C5D04CD000DD378 /* CuePointPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3919081C5D04CD000DD378 /* CuePointPlayer.swift */; };
 		1A64ABC41BF8F6C00065106A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABC31BF8F6C00065106A /* AppDelegate.swift */; };
 		1A64ABC61BF8F6C00065106A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABC51BF8F6C00065106A /* MasterViewController.swift */; };
 		1A64ABC81BF8F6C00065106A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64ABC71BF8F6C00065106A /* DetailViewController.swift */; };
@@ -19,11 +20,11 @@
 		1A8521D01C3D0C1D00343171 /* QuveDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521CE1C3D0C1D00343171 /* QuveDataModel.xcdatamodeld */; };
 		1A8521D61C3D128600343171 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521D21C3D128600343171 /* Track.swift */; };
 		1A8521D81C3D128600343171 /* CuePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521D41C3D128600343171 /* CuePoint.swift */; };
-		1A8521DF1C3D152400343171 /* Track+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521DD1C3D152400343171 /* Track+CoreDataProperties.swift */; };
 		1A8521E01C3D152400343171 /* CuePoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */; };
 		1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */; };
 		1A8B14FC1BFCD39F00483482 /* CuePointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */; };
 		1A93920C1C3E93FD002669A7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A93920B1C3E93FD002669A7 /* CloudKit.framework */; };
+		1AA14BFD1C5CB4B50038B295 /* Track+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA14BFC1C5CB4B50038B295 /* Track+CoreDataProperties.swift */; };
 		1AA419BB1C2870660022BE1C /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 1AA419B91C2870660022BE1C /* Localizable.stringsdict */; };
 		1AC7F4951C175CAB00FDEC1F /* CuepointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */; };
 		1AEDB9821C209F8600087C20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AEDB9841C209F8600087C20 /* Localizable.strings */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A3919081C5D04CD000DD378 /* CuePointPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePointPlayer.swift; sourceTree = "<group>"; };
 		1A64ABC01BF8F6C00065106A /* quve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A64ABC31BF8F6C00065106A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A64ABC51BF8F6C00065106A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -67,12 +69,12 @@
 		1A8521CF1C3D0C1D00343171 /* QuveDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuveDataModel.xcdatamodel; sourceTree = "<group>"; };
 		1A8521D21C3D128600343171 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = CoreData/Track.swift; sourceTree = "<group>"; };
 		1A8521D41C3D128600343171 /* CuePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CuePoint.swift; path = CoreData/CuePoint.swift; sourceTree = "<group>"; };
-		1A8521DD1C3D152400343171 /* Track+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataProperties.swift"; path = "CoreData/Track+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CuePoint+CoreDataProperties.swift"; path = "CoreData/CuePoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerInformationProvider.swift; sourceTree = "<group>"; };
 		1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuePointManager.swift; sourceTree = "<group>"; };
 		1A93920A1C3E93ED002669A7 /* quve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quve.entitlements; sourceTree = "<group>"; };
 		1A93920B1C3E93FD002669A7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1AA14BFC1C5CB4B50038B295 /* Track+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataProperties.swift"; path = "CoreData/Track+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1AA419BA1C2870660022BE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		1AC7F4941C175CAB00FDEC1F /* CuepointTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuepointTableViewCell.swift; sourceTree = "<group>"; };
 		1AEDB9831C209F8600087C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -166,7 +168,7 @@
 		1A8521C81C3D05D900343171 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				1A8521DD1C3D152400343171 /* Track+CoreDataProperties.swift */,
+				1AA14BFC1C5CB4B50038B295 /* Track+CoreDataProperties.swift */,
 				1A8521DE1C3D152400343171 /* CuePoint+CoreDataProperties.swift */,
 				1A8521D21C3D128600343171 /* Track.swift */,
 				1A8521D41C3D128600343171 /* CuePoint.swift */,
@@ -193,6 +195,7 @@
 			children = (
 				1A8B14F51BFCC5C700483482 /* MediaPlayerInformationProvider.swift */,
 				1A8B14FB1BFCD39F00483482 /* CuePointManager.swift */,
+				1A3919081C5D04CD000DD378 /* CuePointPlayer.swift */,
 			);
 			name = "quve-logic";
 			sourceTree = "<group>";
@@ -344,9 +347,10 @@
 				1A8B14F61BFCC5C700483482 /* MediaPlayerInformationProvider.swift in Sources */,
 				1AFF22A41C162525005F9AFC /* TrackTableViewCell.swift in Sources */,
 				1AFF22A61C16343D005F9AFC /* AddCueViewController.swift in Sources */,
-				1A8521DF1C3D152400343171 /* Track+CoreDataProperties.swift in Sources */,
+				1AA14BFD1C5CB4B50038B295 /* Track+CoreDataProperties.swift in Sources */,
 				1A8521CD1C3D0AAF00343171 /* CoreDataStack.swift in Sources */,
 				1A8521E01C3D152400343171 /* CuePoint+CoreDataProperties.swift in Sources */,
+				1A3919091C5D04CD000DD378 /* CuePointPlayer.swift in Sources */,
 				1A64ABC61BF8F6C00065106A /* MasterViewController.swift in Sources */,
 				1A64ABC41BF8F6C00065106A /* AppDelegate.swift in Sources */,
 				1A8521D61C3D128600343171 /* Track.swift in Sources */,

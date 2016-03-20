@@ -19,12 +19,13 @@ func ==(lhs: Track, rhs: Track) -> Bool{
 }
 
 class Track: NSManagedObject {
-  private let artworkSize = 300
+  private let artworkSize = 100
 
   func setInformationAccordingTo(nowPlayingItem nowPlayingItem: MPMediaItem){
     self.title = nowPlayingItem.title ?? "Unknown title"
     self.artistName = nowPlayingItem.artist ?? "Unknown artist"
     self.artwork = nowPlayingItem.artwork?.imageWithSize(CGSize(width: artworkSize, height: artworkSize))
+    self.persistentID = nowPlayingItem.valueForProperty(MPMediaItemPropertyPersistentID) as? NSNumber
     self.cuePoints = Set<CuePoint>()
   }
 }

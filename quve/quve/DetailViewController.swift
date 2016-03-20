@@ -8,9 +8,11 @@
 
 import UIKit
 import CoreData
+import MediaPlayer
 
 class DetailViewController: UITableViewController {
   var cuePointManager = CuePointManager.sharedInstance
+  let cuePointPlayer = CuePointPlayer(mediaPlayerInformationProvider: CuePointManager.sharedInstance.mediaPlayerInformationProvider)
   
   var track: Track? {
     didSet {
@@ -60,11 +62,19 @@ class DetailViewController: UITableViewController {
     
     if let cuepoint = cuePoints?[indexPath.row]{
       cell.cuepointDescriptionLabel.text = cuepoint.name ?? ""
-      cell.cuepointTimeRangeLabel.text = "\(cuepoint.estimatedStartTimeOfInterestPoint()) - \(cuepoint.addedAtPlaybackTime())"
+      cell.cuepointTimeRangeLabel.text = "\(cuepoint.estimatedStartTimeOfInterestPointAsString()) - \(cuepoint.addedAtPlaybackTime())"
       cell.cuepointImage.backgroundColor = colors[indexPath.row % colors.count]
     }
     
     return cell
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    if let cell = tableView.dequeueReusableCellWithIdentifier("CuepointTableViewCell", forIndexPath: indexPath) as? CuepointTableViewCell, cuePoint = cuePoints?[indexPath.row] {
+      cell.cuepointImage.backgroundColor = UIColor.redColor()
+      
+      cuePointPlayer.playCuePoint(cuePoint)
+    }
   }
   
   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

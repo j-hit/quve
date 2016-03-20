@@ -11,16 +11,23 @@ import CoreData
 
 
 class CuePoint: NSManagedObject {
-  func estimatedStartTimeOfInterestPoint()->String{
-    var estimatedStartTime: NSTimeInterval = 0.0
-    let secondsToSubtractFromPlaybackTime = 10.0
-    if let playbackTime = playbackTime?.doubleValue where playbackTime >= secondsToSubtractFromPlaybackTime{
-      estimatedStartTime = playbackTime - secondsToSubtractFromPlaybackTime
-    }
-    return estimatedStartTime.timeAsHourMinuteSecondStringRepresentation()
+  func estimatedStartTimeOfInterestPointAsString()->String {
+    return estimatedStartTimeOfInterestPoint.timeAsHourMinuteSecondStringRepresentation()
   }
   
-  func addedAtPlaybackTime()->String{
+  var estimatedStartTimeOfInterestPoint: NSTimeInterval {
+    var estimatedStartTime: NSTimeInterval = 0.0
+    if let playbackTime = playbackTime?.doubleValue where playbackTime >= duration{
+      estimatedStartTime = playbackTime - duration
+    }
+    return estimatedStartTime
+  }
+  
+  var duration: NSTimeInterval {
+    return 10.0
+  }
+  
+  func addedAtPlaybackTime()->String {
     var playbackTimeString = ""
     if let playbackTime = playbackTime?.doubleValue {
       playbackTimeString = playbackTime.timeAsHourMinuteSecondStringRepresentation()
@@ -30,7 +37,7 @@ class CuePoint: NSManagedObject {
 }
 
 extension NSTimeInterval{
-  func timeAsHourMinuteSecondStringRepresentation()->String{
+  func timeAsHourMinuteSecondStringRepresentation()->String {
     var playbackTimeStringRepresentation: String = ""
     let playbackTimeInSeconds = Int(round(self));
     let hours = playbackTimeInSeconds / 3600;
